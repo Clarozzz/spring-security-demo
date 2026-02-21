@@ -18,4 +18,12 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 secret:
-  key: ${SECRET_KEY}
+  key: ${SECRET_KEY:a650cb574a8d7eb44162f0054acd36bd019d8b015bc6be372a9fcd1f1cf378c4}
+  expiration: 30000
+
+# 300000 # 5 minutes
+refresh:
+  token:
+    key: ${REFRESH_KEY:2a63540ba5ba055516158432f657cc7c3cf2c79f5129e9a66b90cf990f2a8b00}
+    expiration: 604800000 # 7 days
+
